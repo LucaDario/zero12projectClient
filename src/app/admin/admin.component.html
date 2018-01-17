@@ -1,0 +1,24 @@
+
+
+<mat-card>
+    <mat-card-header >
+        <menu></menu>
+        <div mat-card-avatar ></div>
+        <mat-card-title><h2 align="center">Project Zero12</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+            <i>Pannello ADMIN</i>
+            <ul>
+                <li *ngFor="let user of _usersAndConsumptions">
+                    <div>
+                        <i class="floatLeft">Id: {{user.user}}</i>
+                        <i class="floatLeft">Consumo: {{user.consumption}}</i>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+    </mat-card-content>
+</mat-card>

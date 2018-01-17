@@ -1,0 +1,20 @@
+<div xmlns:background-color="http://www.w3.org/1999/xhtml">
+  <i>Consumo Totale= {{consumptionTotal}}</i>
+  <ul>
+    <li *ngFor="let light of lights">
+      <div id="#light.id" class="borderLine">
+        <i class="floatLeft">Id: {{light.id}}  </i>
+        <br>
+        <i class="floatLeft">Posizione: {{light.location}}  </i>
+        <br>
+        <i class="floatLeft">Consumo: {{light.consumption}}  </i>
+        <mat-slide-toggle id="toggleStatus" (change)="changeStatus($event,light.id)" [checked]="light.status"></mat-slide-toggle>
+        <button (click)="deleteLight(light.id, light)" mat-raised-button color="warn">Elimina</button>
+
+      </div>
+    </li>
+  </ul>
+  <button (click)="openDialog()" mat-mini-fab color="warn">+</button>
+
+
+</div>

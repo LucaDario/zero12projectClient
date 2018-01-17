@@ -1,0 +1,14 @@
+
+<div [ngSwitch]="_credentials._role">
+    <div *ngSwitchCase="'N/A'">
+        <login></login>
+    </div>
+    <div *ngSwitchCase="'ROLE_USER'">
+        <wrapperuserview></wrapperuserview>
+
+    </div>
+    <div *ngSwitchCase="'ROLE_ADMIN'">
+        <admin></admin>
+    </div>
+
+</div>

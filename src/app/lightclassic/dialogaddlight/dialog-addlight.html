@@ -1,0 +1,33 @@
+<div class="example-container">
+
+    <mat-form-field>
+        <mat-select placeholder="Tipo Luce" [(value)]="_type">
+            <mat-option *ngFor="let light of _lightsType" [value]="light.value">
+                {{ light.viewValue }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Id Luce" [(ngModel)]="_id" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Locazione" [(ngModel)]="_location">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Consumo" type="number" [(ngModel)]="_consumption">
+    </mat-form-field>
+
+
+
+
+
+
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Annulla</button>
+        <button mat-button [mat-dialog-close]="[_id, _location, _consumption, _type]" cdkFocusInitial>Ok</button>
+    </div>
+</div>
+
+
